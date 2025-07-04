@@ -99,8 +99,17 @@ p {
 }
 
 #fakeLanding {
-  background-color: #121212; /* Dark background */
-  color: #f1f1f1; /* Light text for contrast */
+  background-color: #121212;
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Fills full screen height */
+  width: 100vw;       /* Fills full screen width */
+  margin: 0;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 #fakeLanding h1 {
