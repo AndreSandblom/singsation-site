@@ -31,7 +31,7 @@ main {
   box-sizing: border-box;
   top: 0;
   left: 0;
-  background-color: #fdf6f0;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,6 +43,7 @@ main {
 .page.active {
   opacity: 1;
   position: relative;
+  min-height: 100vh;
   pointer-events: auto;
 }
 
@@ -101,14 +102,14 @@ p {
 #fakeLanding {
   background-color: #121212;
   color: #f1f1f1;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Fills full screen height */
-  width: 100vw;       /* Fills full screen width */
-  margin: 0;
-  padding: 2rem 1rem;
   box-sizing: border-box;
 }
 
