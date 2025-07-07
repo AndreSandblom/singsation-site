@@ -1,28 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const jessica = document.getElementById("jessica");
-    const leila = document.getElementById("leila");
-
-    const fakeLanding = document.getElementById("fakeLanding");
-    const realReveal = document.getElementById("realReveal");
-    const revealMessage = document.getElementById("revealMessage");
-
-
-    function handleGrandparent(role) {
-        fakeLanding.classList.remove("active");
-
-        const imageTease = document.getElementById("ultraSound");
-        imageTease.classList.add("active");
-
-        setTimeout(() => {
-            imageTease.classList.remove("active");
-            revealMessage.textContent = `🎉 Överraskning! Du ska bli ${role}! 🎉`;
-            realReveal.classList.add("active");
-        }, 1000);
-    }
-
-    jessica.addEventListener("click", () => handleGrandparent("Farmor"));
-    leila.addEventListener("click", () => handleGrandparent("Mormor"));
-
     const countdown = document.getElementById("countdown");
 
     const dueDate = new Date("2026-01-10T00:00:00");

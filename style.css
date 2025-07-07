@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -9,239 +10,52 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  overflow-x: hidden;
+  text-align: center;
 }
 
 main {
   width: 100%;
-  max-width: none; /* Remove fixed width cap */
-  padding: 0;
-  margin: 0;
+  max-width: 500px;
+  padding: 2rem 1.5rem;
   box-sizing: border-box;
 }
 
-/* Page transitions */
+/* Reveal page */
 .page {
-  opacity: 0;
-  transition: opacity 1s ease;
-  position: absolute;
-  width: 100%;
-  min-height: 100%;
-  padding: 2rem 1rem;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  background-color: transparent;
+  padding: 2rem;
+  background-color: #fdf6f0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
 }
 
-
-.page.active {
-  opacity: 1;
-  position: relative;
-  min-height: 100vh;
-  pointer-events: auto;
-}
-
-/* Headings and text */
-h1, h2, p {
-  text-align: center;
-  margin: 0.5rem 0;
-}
-
+/* Headings */
 h1 {
-  font-size: clamp(1.5rem, 6vw, 2.2rem);
+  font-size: 2rem;
+  color: #457b9d;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: clamp(1.2rem, 5vw, 1.8rem);
-}
-
-/* Buttons */
-button {
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  margin: 1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #a8dadc;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 80%;
-  max-width: 300px;
-}
-
-button:hover {
-  background-color: #88c9cc;
+  font-size: 1.25rem;
+  margin-top: 0;
+  color: #333;
 }
 
 /* Countdown */
 #countdown {
-  font-size: clamp(1.2rem, 5vw, 1.6rem);
-  padding: 1rem 1.2rem;
-  text-align: center;
-  color: #1d3557;
-  background: #f1faee;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  animation: fadeIn 1.2s ease;
-  max-width: 95vw;
-  width: auto;
-  margin: 0 auto;
-}
-
-p {
-  font-size: clamp(1rem, 4vw, 1.2rem);
-}
-
-#fakeLanding {
-  background-color: #121212;
-  color: #f1f1f1;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-#fakeLanding h1 {
-  font-size: 2.2rem;
-  color: #1db954; /* Spotify green or pick neon pink */
-  text-shadow: 0 0 10px #1db954;
-}
-
-#fakeLanding p {
-  color: #ccc;
-}
-
-#fakeLanding button {
-  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  font-size: 1.5rem;
   font-weight: bold;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin: 1.5rem 0;
+  color: #ffafcc;
 }
 
-#fakeLanding button:hover {
-  background: linear-gradient(45deg, #ff33cc, #5555ff);
-}
-
-#jessica {
-  color: #1e90ff; /* Dodger Blue */
-  background-image: none; 
-}
-
-#jessica:hover {
-  color: #1c86ee;
-}
-
-#leila {
-  color: #ff4c4c; /* Vivid Red */
-  background-color: none; 
-}
-
-#leila:hover {
-  color: #e04343;
-}
-
-#realReveal {
-  background: radial-gradient(circle at center, #ffffff 0%, #e0f7fa 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#ultraSound img {
-  width: 90vw;
-  max-height: 70vh;
-  object-fit: contain;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@media (max-width: 600px) {
-  .page {
-    padding: 1rem;
-  }
-
-  button {
-    font-size: 1rem;
-    padding: 0.8rem 1rem;
-    margin: 0.5rem 0;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  #realReveal {
-    justify-content: flex-start;
-  }
-
-  #realReveal h1,
-  #realReveal h2,
-  #countdown {
-    margin: 1rem 0;
-  }
-}
-
-/* Reveal Message Styling */
-#realReveal h1#revealMessage {
-  font-size: 2.5rem;
-  font-family: 'Pacifico', cursive, sans-serif;
-  color: #00b894;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  animation: popFade 1s ease-in-out forwards;
-  margin-bottom: 1rem;
-}
-
-/* Countdown Styling */
-#countdown {
-  font-size: 1.8rem;
-  font-family: 'Segoe UI', sans-serif;
-  color: #1d3557;
-  background: #f1faee;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  animation: fadeIn 1.2s ease;
-  text-align: center;
-  max-width: 90%;
-}
-
+/* Image styling */
 #babyClothImage {
-  width: 90vw;
-  max-height: 70vh;
-  object-fit: contain;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  animation: fadeIn 1s ease-in;
-}
-
-/* Fun Animation */
-@keyframes popFade {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
